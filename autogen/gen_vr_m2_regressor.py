@@ -718,7 +718,7 @@ def generateLeftArmRegressor(urdf_path: str = None, output_dir: str = None):
         output_dir: Output directory for generated files. If None, uses default path.
     """
     if urdf_path is None:
-        urdf_path = '../models/urdf/origin/vr_m2_left_arm_updated.urdf'
+        urdf_path = '../vr_m2_description/urdf/origin/vr_m2_left_arm.urdf'
     if output_dir is None:
         output_dir = '../sysid/c/autogen/VRM2LeftArm'
     
@@ -815,7 +815,7 @@ def generateRightArmRegressor(urdf_path: str = None, output_dir: str = None):
         output_dir: Output directory for generated files. If None, uses default path.
     """
     if urdf_path is None:
-        urdf_path = '../models/urdf/origin/vr_m2_right_arm_updated.urdf'
+        urdf_path = '../vr_m2_description/urdf/origin/vr_m2_right_arm.urdf'
     if output_dir is None:
         output_dir = '../sysid/c/autogen/VRM2RightArm'
     
@@ -928,7 +928,8 @@ if __name__ == '__main__':
         print('='*60 + '\n')
         
         # Test left arm
-        left_urdf = '../models/urdf/origin/vr_m2_left_arm_updated.urdf'
+        left_urdf = '../vr_m2_description/urdf/origin/vr_m2_left_arm.urdf'
+
         if os.path.exists(left_urdf):
             print('='*60)
             print('Testing Left Arm')
@@ -955,9 +956,9 @@ if __name__ == '__main__':
         print('\n')
         
         # Test right arm
-        right_urdf = '../sysid/matlab/vr_m2_right_arm.urdf'
+        right_urdf = '../vr_m2_description/urdf/origin/vr_m2_right_arm.urdf'
         if not os.path.exists(right_urdf):
-            right_urdf = '../models/urdf/origin/vr_m2_right_arm_updated.urdf'
+            right_urdf = '../vr_m2_description/urdf/origin/vr_m2_right_arm.urdf'
         
         if os.path.exists(right_urdf):
             print('='*60)
