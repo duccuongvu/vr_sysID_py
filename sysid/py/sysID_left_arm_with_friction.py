@@ -287,7 +287,8 @@ def main():
             # '../sysid/matlab/vr_m2_left_arm.urdf',
             # '../../sysid/matlab/vr_m2_left_arm.urdf',
             # '../models/urdf/origin/vr_m2_left_arm_updated.urdf',
-            '../../models/urdf/origin/vr_m2_left_arm_updated.urdf'
+            # '../../models/urdf/origin/vr_m2_left_arm_updated.urdf'
+           '../../vr_m2_description/urdf/origin/vr_m2_left_arm.urdf'
         ]
         urdf_path = None
         for path in default_paths:
@@ -346,7 +347,7 @@ def main():
     
     # Update left arm URDF with identified parameters
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    left_arm_urdf_path = os.path.normpath(os.path.join(script_dir, '../../models/urdf/origin/vr_m2_left_arm_updated_sysID.urdf'))
+    left_arm_urdf_path = os.path.normpath(os.path.join(script_dir, '../../vr_m2_description/urdf/origin/vr_m2_left_arm.urdf'))
     
     updated_urdf_path = None
     if os.path.exists(left_arm_urdf_path):
